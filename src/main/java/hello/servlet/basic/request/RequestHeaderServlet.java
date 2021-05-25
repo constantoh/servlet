@@ -64,7 +64,8 @@ public class RequestHeaderServlet extends HttpServlet {
 
         System.out.println("[Host 편의 조회]");
         System.out.println("request.getServerName() = " +request.getServerName()); //Host 헤더
-        System.out.println("request.getServerPort() = " +request.getServerPort()); //Host 헤더 System.out.println();
+        System.out.println("request.getServerPort() = " +request.getServerPort()); //Host 헤더
+        System.out.println();
 
         System.out.println("[Accept-Language 편의 조회]");
         request.getLocales().asIterator().forEachRemaining(locale -> System.out.println("locale = " + locale));
@@ -80,7 +81,7 @@ public class RequestHeaderServlet extends HttpServlet {
         System.out.println();
 
         System.out.println("[Content 편의 조회]");
-        System.out.println("request.getContentType() = "        + request.getContentType());
+        System.out.println("request.getContentType() = "        + request.getContentType());    //get은 보통 컨텐트타입이 없으니깐 null일 가능성이 높다.
         System.out.println("request.getContentLength() = "      + request.getContentLength());
         System.out.println("request.getCharacterEncoding() = "  + request.getCharacterEncoding());
 
