@@ -8,12 +8,14 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MemberRepositoryTest {
+
     MemberRepository memberRepository = MemberRepository.getInstance();
 
     @AfterEach
     void afterEach() {
         memberRepository.clearStore();
     }
+
     @Test
     void save() {
         //given
@@ -26,6 +28,7 @@ class MemberRepositoryTest {
         Member findMember = memberRepository.findById(savedMember.getId());
         assertThat(findMember).isEqualTo(savedMember);
     }
+
     @Test
     void findAll() {
 

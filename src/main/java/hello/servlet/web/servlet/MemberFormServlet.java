@@ -10,6 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Servlet
+ *  urlPatterns의 패턴으로 Client 요청이 오면 해당 서블릿을 호출하고 service 메소드를 호출한다.
+ *
+ *  HTML Form을 만들어서 response객체에 담아서 전달한다.
+ *
+ * */
+
 @WebServlet(name = "memberFormServlet", urlPatterns = "/servlet/members/new-form")
 public class MemberFormServlet extends HttpServlet {
 

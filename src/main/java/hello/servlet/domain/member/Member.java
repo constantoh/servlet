@@ -11,6 +11,7 @@ public class Member {
     private String username;
     private int age;
 
+    // 기본 생성자를 생성하는 이유 :
     public Member(){
 
     }

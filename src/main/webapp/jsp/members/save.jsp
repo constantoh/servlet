@@ -4,12 +4,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     // request, response 사용 가능
+
     MemberRepository memberRepository = MemberRepository.getInstance();
-    System.out.println("save-result.jsp");
+
     String username = request.getParameter("username");
     int age = Integer.parseInt(request.getParameter("age"));
+
     Member member = new Member(username, age);
-    System.out.println("member = " + member);
+
     memberRepository.save(member);
 %>
 <html>
@@ -19,6 +21,10 @@
 <body>
 성공
 <ul>
+    <!--
+        자바 코드를 출력할 수 있다.
+        객체는 response에 담겨 있다.
+    -->
     <li>id=<%=member.getId()%></li>
     <li>username=<%=member.getUsername()%></li>
     <li>age=<%=member.getAge()%></li>

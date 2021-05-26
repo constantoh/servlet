@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * HttpServletRequest를 Model로 사용하는셈이다.
+ * req.setAttribute();
+ * req.getAttribute();
+ *
+ * */
 @WebServlet(name = "mvcMemberSaveServlet", urlPatterns = "/servlet-mvc/members/save")
 public class MvcMemberSaveServlet extends HttpServlet {
 

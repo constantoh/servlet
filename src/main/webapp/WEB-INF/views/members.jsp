@@ -14,6 +14,7 @@
     <th>age</th>
     </thead>
     <tbody>
+    <!-- tablib 사용 -->
     <c:forEach var="item" items="${members}">
     <tr>
         <td>${item.id}</td>

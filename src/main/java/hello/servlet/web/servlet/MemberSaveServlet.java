@@ -10,15 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.http.HttpClient;
+
+/**
+ * Parameter을 통해 Member 객체를 만든다.
+ * memberRepository를 통해 저장한다.
+ * 생성한 객체 정보를 보여줄 화면을 HTML로 구성하여 응답한다.
+ * */
 
 @WebServlet(name = "memberSaverServlet", urlPatterns = "/servlet/members/save")
 public class MemberSaveServlet extends HttpServlet {
+
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("MemberSaveServlet.service");
 
         String username = req.getParameter("username");
         int age = Integer.parseInt(req.getParameter("age"));
